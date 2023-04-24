@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+html{
+    font-size: 1vh;
+}
+
+:root{
+    --blue: blue;
+    --green: green;
+    --yellow: yellow;
+    --red: red;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    padding: 5%;
+}
+
+.container__titulo{
+    height: 15%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+}
+
+.container__imc{
+    height: 85%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border: 2px solid black;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.container__imc__calculadora{
+    height: 100%;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+.container__calculadora--peso{
+    height: 30%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container__calculadora--altura{
+    height: 30%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#peso, #altura{
+    margin-top: 5%;
+    height: 30%;
+    width: 100%;
+    font-size: 2rem;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.container__calculadora--botones{
+    height: 40%;
+    width: 60%;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container__calculadora--botones--boton{
+    height: 30%;
+    width: 70%;
+    font-size: 2rem;
+    color: #fff;
+    background-color: blue;
+    border: none;
+    border-radius: 20px;
+    transition: all 0.5s;
+}
+
+.container__calculadora--botones--boton:hover{
+    background-color: aqua;
+    transition: all 0.5s;
+}
+
+.container__imc__resultado{
+    height: 100%;
+    width: 55%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-left: 2px solid black;
+}
+
+.container__resultado--imc{
+    height: 40%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container__resultado--result{
+    margin-top: 10%;
+    height: 25%;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.imc{
+    font-size: 2rem;
+}
+
+.container__resultado--result{
+    font-size: 2rem;
+}
+
+.container__resultado--rangos{
+    height: 50%;
+    width: 50%;
+    padding-top: 12%;
+}
+
+.gauge {
+    background: 
+    /*Parte Negra*/
+    radial-gradient( circle at bottom center, black 5vh, #5555 , transparent 2vh),
+    /*Pedazos de pizza*/
+    conic-gradient( from 4.7rad at 50% 100%, rgb(0, 255, 255) 0deg 36deg, #2aee4b 36deg 72deg, rgb(255, 166, 0) 72deg 108deg, #dde027 108deg 144deg, #d31208 144deg);
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.09), 0 0 35px 5px rgba(255, 255, 255, 0.29);    
+    height: 12vw;
+    border-radius: 40vw 40vw 0 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.parent{
+    display: grid;
+    place-items: center;
+    height: 100%;
+    position: relative;
+}
+
+.child{
+    width: 15px;
+    height: 90%;
+    border-radius: 50% 50% 10% 10%;
+    background: black;
+    animation: spin 2s ;
+    transform: 50% 50% 0;
+    rotate: -90deg;
+    position: absolute;
+    bottom: 10px;
+    transform-origin: center bottom;
+    transition: all 0.7s;
+}
+
+@keyframes spin{
+    0%{
+        rotate: 90deg;
+    }
+    100%{
+        rotate: -90deg;
+    }
+}
+
+@media (max-width: 768px){
+    .container{
+        height: 50vh;
+    }
+    
+}

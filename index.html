@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IMC</title>
+<link rel="stylesheet" href="./style.css" />
+<script defer src="./main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="container__titulo">
+            <h1>CALCULADORA DE IMC</h1>
+        </div>
+        <div class="container__imc">
+            <div class="container__imc__calculadora">
+                <div class="container__calculadora--peso">
+                    <label for="peso">Peso (kg)</label>
+                    <input type="text" id="peso"/>
+                </div>
+                <div class="container__calculadora--altura">
+                    <label for="altura">Altura (m)</label>
+                    <input type="text" id="altura" />
+                </div>
+                <div class="container__calculadora--botones">
+                    <button class="container__calculadora--botones--boton" id="calcular">CALCULAR</button>
+                    <button class="container__calculadora--botones--boton" id="reiniciar">REINICIAR</button>
+                </div>
+            </div>
+            <div class="container__imc__resultado">
+                <div class="container__resultado--imc">
+                    <p class="imc">Su IMC (Indice de Masa Comporal) es:</p>
+                    <div class="container__resultado--result" id="resultado"></div>
+                </div>
+                <div class="container__resultado--rangos">
+                    <div class="gauge">
+                        <div class="parent">
+                            <div class="child" id="child">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
